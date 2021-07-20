@@ -81,6 +81,8 @@ function connectedCallback() {
 		{ ...this._props, context },
 		toVdom(this, this._vdomComponent)
 	);
+
+	this.innerHTML = ""
 	(this.hasAttribute('hydrate') ? hydrate : render)(this._vdom, this._root);
 }
 
