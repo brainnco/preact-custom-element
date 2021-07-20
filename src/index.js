@@ -82,7 +82,6 @@ function connectedCallback() {
 		toVdom(this, this._vdomComponent)
 	);
 
-	this.innerHTML = ""
 	(this.hasAttribute('hydrate') ? hydrate : render)(this._vdom, this._root);
 }
 
@@ -161,5 +160,10 @@ function toVdom(element, nodeName) {
 
 	// Only wrap the topmost node with a slot
 	const wrappedChildren = nodeName ? h(Slot, null, children) : children;
+
+	if(nodeName && !options.shadow) {
+		element.innerHTML = ""
+	}
+
 	return h(nodeName || element.nodeName.toLowerCase(), props, wrappedChildren);
 }
