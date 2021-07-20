@@ -2,9 +2,8 @@
 	"name": "preact-custom-element",
 	"version": "4.2.1",
 	"description": "Wrap your component up as a custom element",
-	"main": "dist/preact-custom-element.js",
-	"module": "dist/preact-custom-element.esm.js",
-	"unpkg": "dist/preact-custom-element.umd.js",
+	"main": "src/index.js",
+	"module": "src/index.js",
 	"source": "src/index.js",
 	"scripts": {
 		"prepare": "microbundle",
