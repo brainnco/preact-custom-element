@@ -161,7 +161,7 @@ function toVdom(element, nodeName) {
 	// Only wrap the topmost node with a slot
 	const wrappedChildren = nodeName ? h(Slot, null, children) : children;
 
-	if(nodeName && !options.shadow) {
+	if(nodeName) {
 		element.innerHTML = ""
 	}
 
